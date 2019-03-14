@@ -11,5 +11,5 @@ def predict_disease(image):
 		diagnostic = 'No sign of Pneumonia Detected'
 	if prediction.item() == 1:
 		diagnostic = 'Sign of Pneumonia Detected'
-	return prediction
+	return diagnostic
 
