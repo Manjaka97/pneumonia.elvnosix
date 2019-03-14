@@ -4,5 +4,6 @@ def predict_disease(image):
 	model = get_model()
 	tensor = preprocess_image(image)
 	output = model(tensor)
-	print(output)
+	result = torch.max(output, 1)
+	print(result)
 
