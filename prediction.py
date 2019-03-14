@@ -1,3 +1,4 @@
+import torch
 from model import preprocess_image, get_model
 
 def predict_disease(image):
