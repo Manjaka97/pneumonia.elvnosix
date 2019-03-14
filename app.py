@@ -16,7 +16,7 @@ def index():
 		file = request.files['file']
 		image = file.read()
 		prediction = predict_disease(image)
-		return render_template('result.html', prediction='Sign of Pneumonia') 
+		return render_template('result.html', prediction=prediction) 
 
 
 if __name__ == "__main__":
