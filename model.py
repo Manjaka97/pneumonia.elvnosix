@@ -12,7 +12,7 @@ def get_model():
 	model = models.resnet18(pretrained=True)
 	num_features = model.fc.in_features
 	model.fc = nn.Linear(num_features, 2)
-	model.load_state_dict(torch.load(weights))
+	model.load_state_dict(torch.load(weights, map_location='cpu'))
 	model.eval()
 	return model
 
