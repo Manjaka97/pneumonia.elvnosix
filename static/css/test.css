@@ -1,0 +1,42 @@
+.container {
+	font-family: 'PT Sans', sans-serif;
+}
+
+.navbar {
+	background-color: #040203;
+}
+
+.nav-link {
+	color: white;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+a.nav-link:hover {
+	color: #CED4DA;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.fa-bars:hover {
+	color: #CED4DA;
+}
+
+.fa-bars {
+	color: white;
+}
+
+.disclaimer {
+	line-height: 50px;
+	text-align: justify;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.form-control-file {
+	margin-left: 41%;
+	font-family: 'PT Sans', sans-serif;
+}
