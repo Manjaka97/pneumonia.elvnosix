@@ -26,11 +26,6 @@ a.nav-link:hover {
 	color: white;
 }
 
-.jumbotron-fluid {
-  background-image: url("/static/images/Jumbotron.jpg");
-  background-size: cover;
-}
-
 .slideshow {
 	
 }
