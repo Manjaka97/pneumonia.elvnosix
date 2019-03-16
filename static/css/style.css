@@ -27,7 +27,7 @@ a.nav-link:hover {
 }
 
 .jumbotron-fluid {
-  background-image: url("Jumbotron.jpg");
+  background-image: url("/static/images/Jumbotron.jpg");
   background-size: cover;
 }
 
