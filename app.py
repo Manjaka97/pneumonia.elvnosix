@@ -14,7 +14,7 @@ def test():
 	if request.method == 'GET':
 		return render_template('test.html')
 
-	if request.method == 'POST'
+	if request.method == 'POST':
 		if 'file' not in request.files:
 			print('no file uploaded')
 			return
