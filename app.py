@@ -17,7 +17,7 @@ def test():
 	if request.method == 'POST':
 		if 'file' not in request.files:
 			print('no file uploaded')
-			return
+			return 'NO FILE UPLOADED'
 		file = request.files['file']
 		image = file.read()
 		prediction = predict_disease(image)
