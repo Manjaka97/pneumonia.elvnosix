@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/test.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -12,6 +12,14 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		.jumbotron-fluid {
+			background-image: url("/static/images/Jumbotron.jpg");
+			background-size: cover;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -38,36 +46,26 @@
   		</div>
 	</nav>
 
-	<div class="card text-center">
-  		<div class="card-header">
-    		<h1>Disclaimer</h1>
-  		</div>
-  		<div class="card-body">
-    		<h2 class="card-title"></h2>
-    		<div class="container">
-    			<div class="row justify-content-center">
-    				<div class="col-6">
-    					<p class="card-text disclaimer">This application is not meant to replace radiology experts. Although it is highly accurate, errors can still occur. The intended use of this application is to identify urgent cases, speed up the pneumonia identification process, and help in places where expertise is scarce.</p>
-    				</div>
-    			</div>
-    		</div>
-  		</div>
-    	<div class="card-footer text-muted">
-    		<h5>Upload X-ray Scan</h5>
-  		</div>
-    	<div class="card">
-  			<div class="card-body">
-      			<p class="card-text">Please upload an image in a valid format such as .PNG, .JPG or .JPEG. Your personal files will not be stored.</p>
-    			
-  					<div class="container form-group form-file">
-  						<form method="post" enctype="multipart/form-data">
-    						<input type="file" name="file" accept="image/*" required>
-    						<input type="submit" value="Upload Image">
-    					</form>
-  					</div>
-  			</div>
-		</div>
+	<div>
+		<h2>What is Pneumonia?</h2>
+		<p>
+			Pneumonia is an inflammatory condition of the lung affecting primarily the small air sacs known as alveoli. Typically symptoms include some combination of productive or dry cough, chest pain, fever, and trouble breathing. Severity is variable.
+		</p>
+
+		<h2>What causes Pneumonia?</h2>
+		<p>
+			Pneumonia is usually caused by infection with viruses or bacteria and less commonly by other microorganisms, certain medications and conditions such as autoimmune diseases.[4][5] Risk factors include other lung diseases such as cystic fibrosis, COPD, and asthma, diabetes, heart failure, a history of smoking, a poor ability to cough such as following a stroke, or a weak immune system.
+		</p>
+
+		<h2>What are the treatments?</h2>
+		<p>
+			Vaccines to prevent certain types of pneumonia are available. Other methods of prevention include handwashing and not smoking. Treatment depends on the underlying cause. Pneumonia believed to be due to bacteria is treated with antibiotics. If the pneumonia is severe, the affected person is generally hospitalized. Oxygen therapy may be used if oxygen levels are low.
+		</p>
+
+		<h2>Who are the most affected?</h2>
+		<p>
+			Pneumonia affects approximately 450 million people globally (7% of the population) and results in about 4 million deaths per year. Pneumonia was regarded by William Osler in the 19th century as "the captain of the men of death". With the introduction of antibiotics and vaccines in the 20th century, survival improved. Nevertheless, in developing countries, and among the very old, the very young, and the chronically ill, pneumonia remains a leading cause of death. Pneumonia often shortens suffering among those already close to death and has thus been called "the old man's friend".
+		</p>
 	</div>
-	
 </body>
 </html>

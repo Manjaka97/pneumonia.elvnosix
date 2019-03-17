@@ -24,6 +24,11 @@ def test():
 		prediction = predict_disease(image)
 		return render_template('result.html', prediction=prediction)
 
+@app.route('/pneumonia', methods=['GET'])
+def pneumonia():
+	if request.method == 'GET':
+		return render_template('pneumonia.html')
+
 
 if __name__ == "__main__":
   app.run()
