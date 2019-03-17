@@ -67,6 +67,13 @@ a.nav-link:hover {
 	text-align: justify;
 }
 
+.about-description {
+	margin-top: 1%;
+	text-align: justify;
+	font-family: 'PT Sans', sans-serif;
+}
+
+
 .display-4 {
   color: white;
 }
