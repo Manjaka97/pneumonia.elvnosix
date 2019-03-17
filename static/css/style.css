@@ -119,3 +119,8 @@ span.contact:hover {
 .contact-icon {
 	margin-bottom: 5%;
 }
+
+.question {
+	color: white;
+	font-family: 'PT Sans', sans-serif;
+}
