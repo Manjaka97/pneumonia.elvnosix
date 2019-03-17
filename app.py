@@ -4,6 +4,11 @@ app = Flask(__name__)
 
 from prediction import predict_disease
 
+@app.route('/*', methods=['GET'])
+def index():
+	if request.method == 'GET':
+		return render_template('index.html')
+
 @app.route('/', methods=['GET'])
 def index():
 	if request.method == 'GET':
