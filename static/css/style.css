@@ -119,3 +119,7 @@ span.contact:hover {
 .contact-icon {
 	margin-bottom: 5%;
 }
+
+h2.question {
+	color: white; !important;
+}
