@@ -34,6 +34,11 @@ def about():
 	if request.method == 'GET':
 		return render_template('about.html')
 
+@app.route('/training', methods=['GET'])
+def about():
+	if request.method == 'GET':
+		return render_template('training.html')
+
 
 if __name__ == "__main__":
   app.run()
