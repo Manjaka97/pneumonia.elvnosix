@@ -37,7 +37,7 @@ def about():
 @app.route('/training', methods=['GET'])
 def training():
 	if request.method == 'GET':
-		return render_template('training.html')
+		return render_template('/static/images/training.html')
 
 
 if __name__ == "__main__":
