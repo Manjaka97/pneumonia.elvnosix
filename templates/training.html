@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		.jumbotron-fluid {
+			background-color: #EE4B2C;
+			color: white;
+		}
+
+		.pneumonia {
+			background-image: url("/static/images/training-bg.jpg");
+			background-size: cover;
+		}
+	</style>
+
+</head>
+
+<body class="pneumonia">
+	<nav class="navbar navbar-expand-md sticky-top">
+		<a class="navbar-brand" href="/"><img src="/static/images/logo.png"></a>
+  		<button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span><i class="fas fa-bars"></i></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  			<ul class="navbar-nav ml-auto ">
+  				<li class="nav-item">
+  					<a href="/" class="nav-link">Home</a>
+  				</li>
+  				<li class="nav-item">
+  					<a href="/test" class="nav-link">Test</a>
+  				</li>
+  				<li class="nav-item">
+  					<a href="/pneumonia" class="nav-link">Pneumonia</a>
+  				</li>
+  				<li class="nav-item">
+  					<a href="#" class="nav-link">Training Process</a>
+  				</li>
+  			</ul>
+  		</div>
+	</nav>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container justify-content-center">
+    		<h1 class="display-4 text-center">ResNet using PyTorch
+    	</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="card">
+	  				<div class="card-body">
+			    		<h5 class="card-title">Dataset</h5>
+			    		<p class="card-text">The training data consists of 5216 X-ray scans of pediatric patients from one to five years old from Guangzhou Women and Children's Medical Center, Guangzhou. The model was then tested on a test set consisting of 624 images it has not seen before.</p>
+	 				</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="card">
+	  				<div class="card-body">
+			    		<h5 class="card-title">Model</h5>
+			    		<p class="card-text">This ConvNet is a ResNet18 initially pretrained with ImageNet. After trying to use it just as a feature extractor and obtaining unsatisfying results, it was entirely re-trained. You can see the complete implementation of the model on github <a href="https://github.com/Manjaka97/Pneumonia-Detector/blob/master/Pneumonia_Detection_Resnet18_2.ipynb">here</a>.</p>
+	 				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 3%;">
+			<div class="col-sm-6">
+				<div class="card" style="height: 26em;">
+	  				<div class="card-body">
+			    		<h5 class="card-title">Results</h5>
+			    		<h6 class="card-text">Note that for an imbalanced dataset in the medical field, Recall and F1 score are more significant.</h6>
+			    		<table class="table table-hover" style="margin-top: 5%">
+							  <tbody>
+							    <tr>
+							      <th scope="row">Accuracy</th>
+							      <td>90.2%</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">Precision</th>
+							      <td>87.8%</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">Recall</th>
+							      <td>97.9%</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">F1 Score</th>
+							      <td>92.6%</td>
+							    </tr>
+							  </tbody>
+							</table>
+	 				</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="card" style="height: 26em;">
+	  				<div class="card-body">
+			    		<h5 class="card-title">Confusion Matrix</h5>
+			    		<img src="cm.png">
+	 				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
