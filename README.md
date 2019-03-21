@@ -1,2 +1,2 @@
-# lung-disease-detection
-A website used to detect lung diseases from x ray scans
+# pneumonia.elvnosix
+A web application that detects signs of pneumonia from X-ray scans.
