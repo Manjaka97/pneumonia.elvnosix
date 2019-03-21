@@ -133,11 +133,3 @@ span.contact:hover {
 button h2.question {
 	color: white; !important;
 }
-
-.about-card-body {
-	background-color: black; 
-	border-style: solid; 
-	border-width: 1px; 
-	border-color: white;
-	height: 75px;
-}
