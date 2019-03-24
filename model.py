@@ -8,7 +8,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 
 def get_model():
-	weights = 'aug-resnet18-1.pth'
+	weights = 'resnet18-2.pth'
 	model = models.resnet18(pretrained=True)
 	num_features = model.fc.in_features
 	model.fc = nn.Linear(num_features, 2)
