@@ -31,9 +31,9 @@
   				<li class="nav-item">
   					<a href="/pneumonia" class="nav-link">Pneumonia</a>
   				</li>
-  				<li class="nav-item">
-  					<a href="/training" class="nav-link">Training Process</a>
-  				</li>
+<!--  				<li class="nav-item">-->
+<!--  					<a href="/training" class="nav-link">Training Process</a>-->
+<!--  				</li>-->
   			</ul>
   		</div>
 	</nav>
@@ -47,7 +47,7 @@
     		<div class="container">
     			<div class="row justify-content-center">
     				<div class="col-sm-12 col-md-6" style="width: 100%;">
-    					<p class="card-text disclaimer">This application is not meant to replace radiology experts. Although it is highly accurate, errors can still occur. Regardless of what this application says, if a person exhibits some of the symptoms of pneumonia, he needs medical attention. The intended use of this application is to identify urgent cases, speed up the pneumonia identification process, and help in places where expertise is scarce. Right now, this application is specifically targeted towards infants (5 years old or less), but an adult version is coming soon.</p>
+    					<p class="card-text disclaimer">Currently, this application is strictly for educational purposes and is not to be used as expert medical opinion.</p>
     				</div>
     			</div>
     		</div>
@@ -57,11 +57,12 @@
   		</div>
     	<div class="card">
   			<div class="card-body">
-      			<p class="card-text">Please upload an image in a valid format such as .PNG, .JPG or .JPEG. Your personal files will not be stored.</p>
+				<p class="card-text">Please upload an image in one of the following formats: .PNG, .JPG or .JPEG.</p>
+				<p>Please Note: Uploaded files will not be stored.</p>
     			
   					<div class="container form-group form-file">
   						<form method="post" enctype="multipart/form-data">
-    						<input type="file" name="file" accept="image/*" required>
+    						<input type="file" name="photo" accept=".png, .jpg, .jpeg" required>
     						<input type="submit" value="Upload Image">
     					</form>
   					</div>

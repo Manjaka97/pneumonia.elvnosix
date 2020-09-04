@@ -1,13 +1,33 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, flash
+from werkzeug.utils import secure_filename
+from datetime import datetime
+from prediction import detect
+from PIL import Image
+from base64 import b64encode
+import os, shutil, io
+
 
 app = Flask(__name__)
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
-from prediction import predict_disease
+
+# Cleaning temp dir for images, creating it if it does not exist
+temp = '/static/temp'
+if os.path.isdir(temp):
+	shutil.rmtree(temp)
+if not os.path.isdir(temp):
+	os.mkdir(temp)
+
+
+def allowed_file(filename):
+	return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg'}
+
 
 @app.route('/', methods=['GET'])
 def index():
 	if request.method == 'GET':
 		return render_template('index.html')
+
 
 @app.route('/test', methods=['GET','POST'])
 def test():
@@ -15,29 +35,45 @@ def test():
 		return render_template('test.html')
 
 	if request.method == 'POST':
-		print(request.files)
-		if 'file' not in request.files:
+		if 'photo' not in request.files:
 			print('no file uploaded')
 			return 'NO FILE UPLOADED'
-		file = request.files['file']
-		image = file.read()
-		prediction = predict_disease(image)
-		return render_template('result.html', prediction=prediction)
+
+		photo = request.files['photo']
+		if allowed_file(photo.filename):
+			timestamp = str(datetime.now())[:19]
+			timestamp = timestamp.replace(':', '_')
+			filename = os.path.join(temp, timestamp + secure_filename(photo.filename))
+			photo.save(filename)
+
+			detect(filename) # Outputs the result under the same filename
+
+			image_pil = Image.open(filename)
+			output = io.BytesIO()
+			image_pil.save(output, format="JPEG") # Converts the image to a PIL image
+
+			output.seek(0)
+			output = b64encode(output.getvalue()) # Encodes the image to display with html
+			os.remove(filename) # Deleting the file since it is already encoded in memory
+			return render_template('result.html', output=output.decode('ascii'))
+		return 'FILE NAME NOT ACCEPTED'
 
 @app.route('/pneumonia', methods=['GET'])
 def pneumonia():
 	if request.method == 'GET':
 		return render_template('pneumonia.html')
 
+
 @app.route('/about', methods=['GET'])
 def about():
 	if request.method == 'GET':
 		return render_template('about.html')
 
-@app.route('/training', methods=['GET'])
-def training():
-	if request.method == 'GET':
-		return render_template('training.html')
+
+# @app.route('/training', methods=['GET'])
+# def training():
+# 	if request.method == 'GET':
+# 		return render_template('training.html')
 
 
 if __name__ == "__main__":
