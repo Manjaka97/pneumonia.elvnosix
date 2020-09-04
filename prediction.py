@@ -40,8 +40,11 @@ def draw_bounding_boxes(image, labels, boxes, confidences, classIDs, idxs, color
 
 			# draw the bounding box and label on the image
 			cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
-			text = "{}: {:.4f}".format(labels[classIDs[i]], confidences[i])
-			cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 1.5, color, 3)
+			# text = "{}: {:.2f}".format(labels[classIDs[i]], confidences[i]*100)
+			lb = "{}".format(labels[classIDs[i]])
+			conf = "{:.2f}%".format(confidences[i] * 100)
+			cv2.putText(image, lb, (x, y - 45), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
+			cv2.putText(image, conf, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
 
 	return image
 
