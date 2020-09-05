@@ -5,4 +5,5 @@ Jinja2
 opencv-python
 numpy
 Pillow
+requests
 googledrivedownloader
