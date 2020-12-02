@@ -19,7 +19,7 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 # 	print('Weights downloaded!')
 
 # Cleaning temp dir for images, creating it if it does not exist
-temp = '/static/temp'
+temp = 'static/temp'
 if os.path.isdir(temp):
 	shutil.rmtree(temp)
 if not os.path.isdir(temp):
