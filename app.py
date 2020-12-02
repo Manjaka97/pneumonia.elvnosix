@@ -11,12 +11,12 @@ from google_drive_downloader import GoogleDriveDownloader as gdd
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 # Downloading the weights because they are too large for github
-if not os.path.exists('/yolov4.weights'):
-	print('Downloading weights...')
-	gdd.download_file_from_google_drive(file_id='1IfGBvFA7uGt2y6cmjJFW9uviXTSbzY55',
+# if not os.path.exists('/yolov4.weights'):
+# 	print('Downloading weights...')
+# 	gdd.download_file_from_google_drive(file_id='1IfGBvFA7uGt2y6cmjJFW9uviXTSbzY55',
 		
-										dest_path='/yolov4.weights')
-	print('Weights downloaded!')
+# 										dest_path='/yolov4.weights')
+# 	print('Weights downloaded!')
 
 # Cleaning temp dir for images, creating it if it does not exist
 temp = '/static/temp'
