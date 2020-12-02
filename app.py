@@ -13,7 +13,8 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 # Downloading the weights because they are too large for github
 if not os.path.exists('/yolov4.weights'):
 	print('Downloading weights...')
-	gdd.download_file_from_google_drive(file_id='1dhgdBXVr3YPhekAE3kyHqbJNcGnUXab-',
+	gdd.download_file_from_google_drive(file_id='1IfGBvFA7uGt2y6cmjJFW9uviXTSbzY55',
+		
 										dest_path='/yolov4.weights')
 	print('Weights downloaded!')
 
