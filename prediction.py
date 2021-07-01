@@ -67,7 +67,7 @@ def make_prediction(net, layer_names, labels, image, confidence, threshold):
 
 
 def detect(img_path, labels=['Possible Pneumonia Sign'], colors=(0, 0, 255), config='yolov4.cfg',
-		   weights='yolov4.weights', conf=.01, thresh=.01):
+		   weights='yolov4.weights', conf=.001, thresh=.001):
 	# Load weights using OpenCV
 	net = cv2.dnn.readNetFromDarknet(config, weights)
 
