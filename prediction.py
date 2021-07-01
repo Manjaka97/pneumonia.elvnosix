@@ -83,4 +83,3 @@ def detect(img_path, labels=['Possible Pneumonia Sign'], colors=(0, 0, 255), con
 
 	cv2.imwrite(img_path, image)
 	cv2.destroyAllWindows()
-
