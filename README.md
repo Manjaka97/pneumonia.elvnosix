@@ -1,5 +1,3 @@
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/Manjaka97?tab=repositories">
@@ -18,7 +16,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -68,5 +65,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-url]: https://github.com/Manjaka97/scrabble-trainer/blob/master/LICENSE
 [linkedin-url]: https://www.linkedin.com/in/manjaka-andriamasinoro/
-[product-screenshot]: images/screenshot.PNG
+[product-screenshot]: images/screenshot.png
 [demo]: images/demo.gif
