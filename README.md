@@ -4,7 +4,7 @@
     <img src="images/logo.png" alt="Logo" width="250" height="140">
   </a>
 
-  <h3 align="center">PNEUMONIA.ELVNOSIX</h3>
+<h3 align="center"><a href="https://pneumonia.elvnosix.com">PNEUMONIA.ELVNOSIX.COM</a></h3>
 
   <p align="center">
     A WEB APPLICATION THAT DETECTS SIGNS OF PNEUMONIA FROM CHEST X-RAY SCANS
