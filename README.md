@@ -63,7 +63,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[license-url]: https://github.com/Manjaka97/scrabble-trainer/blob/master/LICENSE
+[license-url]: https://github.com/Manjaka97/pneumonia.elvnosix/blob/master/LICENSE
 [linkedin-url]: https://www.linkedin.com/in/manjaka-andriamasinoro/
 [product-screenshot]: images/screenshot.png
 [demo]: images/demo.gif
